@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 import { scrapeProduct } from "@/lib/firecrawl";
 import { sendPriceAlert } from "@/lib/email";
 
