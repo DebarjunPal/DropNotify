@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { scrapeProduct } from "@/lib/firecrawl";
-import { sendPriceDropAlert } from "@/lib/email";
+import { sendPriceAlert } from "@/lib/email";
 
 export async function POST(request) {
   try {
@@ -72,7 +72,7 @@ export async function POST(request) {
             } = await supabase.auth.admin.getUserById(product.user_id);
 
             if (user?.email) {
-              const emailResult = await sendPriceDropAlert(
+              const emailResult = await sendPriceAlert(
                 user.email,
                 product,
                 oldPrice,
