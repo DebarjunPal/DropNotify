@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "supabase/supabase-js";
 import { scrapeProduct } from "@/lib/firecrawl";
+import { sendPriceAlert } from "@/lib/email";
 
 export async function GET() {
     return NextResponse.json({
@@ -76,6 +77,16 @@ export async function POST() {
 
                         if (user?.email) {
                             // Send email notification
+                            const emailResult = await sendPriceAlert(
+                                user.email,
+                                product,
+                                oldPrice,
+                                newPrice
+                            );
+
+                            if (emailResult.success) {
+                                results.alertsSent++;
+                            }
                         }
                     }
                }
