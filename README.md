@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DropNotify
 
-## Getting Started
+### Never miss a price drop again. 🔔
 
-First, run the development server:
+**DropNotify** is a smart price-tracking app that watches your favorite products across the web and pings you the moment the price drops. Set it up once, sit back, and let DropNotify do the hunting. 🕵️‍♂️
+
+[![Made with Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Powered by Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
+[![Styled with Tailwind](https://img.shields.io/badge/Tailwind-CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit-orange?style=for-the-badge)](https://dropnotify-one.vercel.app)
+
+---
+
+## ✨ Features
+
+- 🎯 **Track any product** — just drop in a URL and DropNotify keeps an eye on it
+- 🕸️ **Smart web scraping** powered by Firecrawl to pull live pricing data
+- 📧 **Instant email alerts** via Resend the moment a price drops
+- 📊 **Price history dashboard** with beautiful charts (thanks, Recharts!)
+- 🎨 **Sleek, modern UI** built with Radix UI + Tailwind CSS
+- 🔐 **Secure auth & data storage** with Supabase
+- 🌗 **Light/Dark mode** because your eyes deserve options
+- ⚡ **Blazing fast** — built on Next.js 16 with React 19
+
+---
+
+## 🖥️ Tech Stack
+
+| Layer | Tech |
+|---|---|
+| 🧩 Framework | [Next.js 16](https://nextjs.org) + [React 19](https://react.dev) |
+| 🗄️ Backend & Auth | [Supabase](https://supabase.com) |
+| 🕷️ Web Scraping | [Firecrawl](https://firecrawl.dev) |
+| ✉️ Email Notifications | [Resend](https://resend.com) |
+| 📈 Charts | [Recharts](https://recharts.org) |
+| 🎨 UI Components | [Radix UI](https://www.radix-ui.com) + [Lucide Icons](https://lucide.dev) |
+| 💅 Styling | [Tailwind CSS](https://tailwindcss.com) |
+| 🔔 Toasts | [Sonner](https://sonner.emilkowal.ski) |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/DebarjunPal/DropNotify.git
+cd DropNotify
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### 3️⃣ Set up environment variables
+
+Create a `.env.local` file in the root directory and add your keys:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+FIRECRAWL_API_KEY=your_firecrawl_api_key
+RESEND_API_KEY=your_resend_api_key
+```
+
+### 4️⃣ Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) 🎉 and start tracking!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 How It Works
 
-## Learn More
+1. 🔗 **Paste a product link** — DropNotify grabs the current price
+2. ⏱️ **We monitor it** on a schedule, scraping fresh data automatically
+3. 📉 **Price drops?** You get an instant email — no more refreshing pages all day
+4. 📊 **Check the dashboard** anytime to see the full price history
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Got an idea to make DropNotify even better? PRs and issues are always welcome! 💡
 
-## Deploy on Vercel
+1. Fork the repo 🍴
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request 🚀
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project is open source — feel free to explore, learn, and build on it. 🙌
+
+---
+
+<div align="center">
+
+**Built with ❤️ by [Debarjun Pal](https://github.com/DebarjunPal)**
+
+⭐ If you find this project useful, consider giving it a star!
+
+</div>
