@@ -95,7 +95,7 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: "Price check completed",
+      message: "Price check is completed",
       results,
     });
   } catch (error) {
